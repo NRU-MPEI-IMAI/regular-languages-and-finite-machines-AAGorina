@@ -1,0 +1,20 @@
+digraph G {
+    rankdir=LR;
+  node [shape = doublecircle]; cd, ce, cf;
+  node [shape = circle];
+  ad -> ae [label = "a"]
+  ad -> bd [label = "b"]
+  ae -> af [label = "a"]
+  ae -> be [label = "b"]
+  af -> bf [label = "b"]
+  bd -> be [label = "a"]
+  bd -> cd [label = "b"]
+  be -> bf [label = "a"]
+  be -> ce [label = "b"]
+  bf -> cf [label = "b"]
+  cd -> ce [label = "a"]
+  cd -> cd [label = "b"]
+  ce -> cf [label = "a"]
+  ce -> ce [label = "b"]
+  cf -> cf [label = "b"]
+  }
