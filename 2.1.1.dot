@@ -1,0 +1,15 @@
+digraph G {
+    rankdir=LR;
+  node [shape = doublecircle]; c, f;
+  node [shape = circle];
+  a -> b [label = "a"]
+  a -> a [label = "b"]
+  b -> b [label = "b"]
+  b -> c [label = "a"]
+  c -> c [label = "a, b"]
+  d -> e [label = "b"]
+  d -> d [label = "a"]
+  e -> f [label = "b"]
+  e -> e [label = "a"]
+  f -> f [label = "a, b"]
+  }
