@@ -256,7 +256,7 @@ Q & a & b \\ \hline
     \item $L = \begin{Bmatrix}
 (aab)^{n}b(aba)^{m} | n\geq 0, m \geq 0
 \end{Bmatrix}$
-\\ Можнос построить 
+
 \\ \includegraphics[0.5]{4.1.png}
     \item $L = \begin{Bmatrix}
 uaav | u \in \begin{Bmatrix}
@@ -265,16 +265,43 @@ a, b
 a, b
 \end{Bmatrix}^{*}, |u|_{b} \geq |v|_{a}
 \end{Bmatrix}$
-\\ Фиксируем n 
-\\ Рассмотрим частный случай 
+\\ Воспользуемся леммой о разарстании.
+\\ Зафиксируем n и рассмотрим слово вида $w = b^{n}aaa^{n} \in L$
+\\ Данное слово принадлежит языку и $|w| = 2n + 2 \geq n$
+\\ $w = xyz$ где $y \ne \lambda$ и $|xy| \leq n$
+\\ Рассмотрим разбиаение
+\\ $x = b^{l}, y = b^{m}, z = b^{n -l-m}aaa^{n} $
+\\ Такие что $l+m \leq n$ и $ m > 0$
+\\ Рассмотрим k = 0: тогда $w = xy^{}z = xz = b^{l}b^{n-l-m}aaa^{n} = b^{n-m}aaa^{n} \notin L$
+\\ Таким образом лемма не выполняется. Следовательно L не регулярный.
     \item $L = \begin{Bmatrix}
 a^{m}w | w \in \begin{Bmatrix}
 a, b
 \end{Bmatrix}^{*}, 1 \leq |w|_{b} \leq m
 \end{Bmatrix}$
+\\ Воспользуемся леммой о разарстании.Зафиксируем n и рассмотрим слово вида $w = a^{n}b^{n}$
+\\ Данное слово принадлежит языку и $|w| = 2n \geq n$
+\\ $w = xyz$ где $y \ne \lambda$ и $|xy| \leq n$
+\\ Рассмотрим разбиение
+\\ $x = a^{l}, y = a^{m}, z = a^{n-l-m}b^{n}$
+\\ Такие что $l + m \leq n$ и $m > 0$
+\\ Пусть k = 0, тогда $w = xy^{0}z = a^{l}a^{n-l-m}b^{n} = a^{n-m}b^{n}$
+\\ Заметим что $n-m < n$ и слеовательно $w = a^{n-m}b^{n} \notin L$
+\\ Таким образом лемма не выполняется и L не регулярный
     \item $L = \begin{Bmatrix}
 a^{k}b^{m}a^{n} | k = n \vee m > 0
 \end{Bmatrix}$
+\\ Воспользуемся леммой о разарстании.Зафиксируем n и рассмотрим слово вида $w = a^{n}ba^{n}$
+\\ Данное слово принадлежит языку тк k = n, m = 1
+\\ $|w| = 2n + 1 \geq n$
+\\ $w = xyz$ где $y \ne \lambda$ и $|xy| \leq n$
+\\ Рассмотрим разбиение 
+\\ $x = a^{m}, y = a^{l}, z = a^{n-m-l}ba^{n}$
+\\ Такие что $l + m \leq n$ и $l > 0$
+\\ Рассмотим произвольный $k \geq 0$ :
+\\ $w = xy^{k}z = a^{m}a^{lk}a^{n-m-l}ba^{n} = a^{n-l +lk}ba^{n}$
+\\ Заметим что при $k \ne 1 : w \notin L$
+\\ То есть лемма не выполняется 
     \item $L = \begin{Bmatrix}
 ucv | u \in \begin{Bmatrix}
 a, b
