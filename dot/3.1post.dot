@@ -1,0 +1,13 @@
+digraph G {
+    rankdir=LR;
+start [shape = none]
+  node [shape = doublecircle]; 25, 1245;
+  
+  node [shape = circle];
+  start -> 1
+  1 -> 25 [label = "a"]
+  25 -> 3 [label = "b"]
+  3 -> 1245 [label ="a"]
+  1245 -> 3 [label = "b"]
+  1245 -> 25 [label = "a"]
+  }
