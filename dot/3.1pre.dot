@@ -1,0 +1,14 @@
+digraph G {
+    rankdir=LR;
+start [shape = none]
+  node [shape = doublecircle]; 5;
+  
+  node [shape = circle];
+  start -> 1
+  1 -> 2 [label = "a"]
+  1 -> 5 [label = "a, lambda"]
+  2 -> 3 [label = "b"]
+  3 -> 1 [label = "a, lambda"]
+  3 -> 4 [label = "a, lambda"]
+  4 -> 5 [label = "a"]
+  }
